@@ -1,0 +1,57 @@
+logging:
+  level:
+    com:
+      zh:
+        vmc:
+          dao:
+            mapper: debug
+mapper:
+  identity: MYSQL
+  mappers: com.lh.validation.base.BaseMapper
+  not-empty: true
+mybatis:
+  mapper-locations: classpath*:sqlmap/*.xml
+pagehelper:
+  helperDialect: mysql
+  params: count=countSql
+  reasonable: false
+  supportMethodsArguments: true
+spring:
+  application:
+    name: validation
+  datasource:
+    defaultname: validation
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 1
+    max-active: 20
+    max-open-prepared-statements: 20
+    maxWait: 60000
+    min-evictable-idle-time-millis: 300000
+    min-idle: 5
+    pool-prepared-statements: false
+    test-on-borrow: false
+    test-on-return: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 60000
+    validation-query: SELECT 'x'
+    url: jdbc:mysql://localhost:3306/validation?useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+#    url: jdbc:mysql://192.168.134.189:3306/validation?useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: Aero123!
+
+# JWT配置
+jwt:
+  # 密匙KEY
+  secret: JWTSecret
+  # HeaderKEY
+  tokenHeader: Authorization
+  # Token前缀字符
+  tokenPrefix: Sans-
+  # 过期时间 单位秒 1天后过期=86400 7天后过期=604800
+  expiration: 86400
+  # 配置不需要认证的接口
+  antMatchers: /index,/login/**,/favicon.ico
+
