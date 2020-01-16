@@ -1,5 +1,6 @@
 package com.lh.validation.annotation;
 
+import javax.validation.Payload;
 import javax.validation.constraints.NotNull;
 import java.lang.annotation.*;
 
@@ -20,4 +21,8 @@ public @interface DateRange {
     public String format() default "yyyy-MM";
 
     public String message() default "开始时间不能大于结束时间";
+
+    Class<?>[] groups() default{};
+
+    Class<? extends Payload>[] payload() default {};
 }

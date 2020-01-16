@@ -1,6 +1,7 @@
 package com.lh.validation.annotation;
 
 import javax.validation.Constraint;
+import javax.validation.Payload;
 import java.lang.annotation.*;
 
 /**
@@ -15,5 +16,9 @@ public @interface DateValid{
     Class<?> value() default  Object.class;
 
     String name();
+
+    Class<?>[] groups() default{};
+
+    Class<? extends Payload>[] payload() default {};
 
 }

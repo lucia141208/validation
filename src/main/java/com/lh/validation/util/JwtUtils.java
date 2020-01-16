@@ -1,29 +1,29 @@
-package com.lh.validation.util;
-
-import com.alibaba.fastjson.JSON;
-import com.lh.validation.config.JWTConfig;
-import com.lh.validation.entity.SelfUserEntity;
-import com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithm;
-import lombok.extern.slf4j.Slf4j;
-
-import java.util.Date;
-
-/**
- * @Author liuhh    @Date 2020/1/9 17:20
- */
-@Slf4j
-public class JwtUtils {
-
-    /**
-     * 生成Token
-     * @Author Sans
-     * @CreateTime 2019/10/2 12:16
-     * @Param  selfUserEntity 用户安全实体
-     * @Return Token
-     */
-    public static String createAccessToken(SelfUserEntity selfUserEntity){
-        // 登陆成功生成JWT
-        String token ="";
+//package com.lh.validation.util;
+//
+//import com.alibaba.fastjson.JSON;
+//import com.lh.validation.config.JWTConfig;
+//import com.lh.validation.entity.SelfUserEntity;
+//import com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithm;
+//import lombok.extern.slf4j.Slf4j;
+//
+//import java.util.Date;
+//
+///**
+// * @Author liuhh    @Date 2020/1/9 17:20
+// */
+//@Slf4j
+//public class JwtUtils {
+//
+//    /**
+//     * 生成Token
+//     * @Author Sans
+//     * @CreateTime 2019/10/2 12:16
+//     * @Param  selfUserEntity 用户安全实体
+//     * @Return Token
+//     */
+//    public static String createAccessToken(SelfUserEntity selfUserEntity){
+//        // 登陆成功生成JWT
+//        String token ="";
 //        Jwts.builder()
 //                // 放入用户名和用户ID
 //                .setId(selfUserEntity.getUserId()+"")
@@ -40,7 +40,7 @@ public class JwtUtils {
 //                // 签名算法和密钥
 //                .signWith(SignatureAlgorithm.HS512, JWTConfig.secret)
 //                .compact();
-        return token;
-    }
-
-}
+//        return token;
+//    }
+//
+//}
