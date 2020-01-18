@@ -9,15 +9,15 @@ import java.lang.annotation.*;
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.PARAMETER})
-@Constraint(validatedBy = DateValidator.class)
+@Target({ElementType.PARAMETER,ElementType.TYPE,ElementType.TYPE_PARAMETER})
+@Constraint(validatedBy = {DateValidator.class})
 public @interface DateValid{
 
     Class<?> value() default  Object.class;
 
-    String name();
+    String name() default "";
 
-    Class<?>[] groups() default{};
+    Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
 

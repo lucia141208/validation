@@ -19,6 +19,7 @@ import java.util.Objects;
 @Slf4j
 public class DateValidator implements ConstraintValidator<DateValid,Object> {
 
+    @Override
     public void initialize(DateValid date) {
         System.out.println("initialize 进来了。。。");
     }
@@ -26,7 +27,7 @@ public class DateValidator implements ConstraintValidator<DateValid,Object> {
     @Override
     public boolean isValid(Object o, ConstraintValidatorContext constraintValidatorContext) {
         System.out.println("isValid 进来了。。。");
-        return true;
+        return compareDate(o);
     }
 
     public static boolean compareDate(Object o) {

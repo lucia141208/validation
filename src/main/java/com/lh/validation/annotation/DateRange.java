@@ -12,15 +12,15 @@ import java.lang.annotation.*;
 @Target(ElementType.FIELD)
 public @interface DateRange {
     @NotNull
-    public String startField();
+    String startField();
     @NotNull
-    public String endField();
+    String endField();
     @NotNull
-    public boolean isStart();
+    boolean isStart();
 
-    public String format() default "yyyy-MM";
+    String format() default "yyyy-MM";
 
-    public String message() default "开始时间不能大于结束时间";
+    String message() default "开始时间不能大于结束时间";
 
     Class<?>[] groups() default{};
 
