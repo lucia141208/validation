@@ -23,13 +23,11 @@ public class UserController {
 
     @PostMapping(value = "/check")
     public void checkDate(@DateValid(name = "dto",value = TestDto.class) TestDto dto){
-//        System.out.println(DateValidator.compareDate(dto));
         System.out.println(dto.toString());
     }
 
     @GetMapping(value = "/check")
     public void checkDate1(@DateValid(name = "dto",value = TestDto.class) TestDto dto){
-//        System.out.println(DateValidator.compareDate(dto));
         System.out.println(dto.toString());
     }
 }
