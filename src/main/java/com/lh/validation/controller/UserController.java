@@ -18,6 +18,8 @@ public class UserController {
 
     @GetMapping(value = "/test")
     public void test(@RequestBody  @Validated UserDto dto){
+        System.out.println("123123123");
+
         System.out.println(dto.toString());
     }
 
